@@ -15,7 +15,7 @@ class Profile(models.Model):
     years_of_experience = models.PositiveIntegerField(default=0)
     bio = models.CharField(max_length=1000)
     phone = models.IntegerField(null=True, blank=True)
-    image = models.ImageField(default='default.jpg', upload_to="imgs/profile_pic")
+    image = models.ImageField(upload_to="imgs/profile_pic", blank=True, null=True)  # Make image optional
     email = models.EmailField(null=True)  
     has_completed_questionnaire = models.BooleanField(default=False)
 

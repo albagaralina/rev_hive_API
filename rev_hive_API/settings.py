@@ -127,3 +127,12 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOW_ALL_ORIGINS = True 
 APPEND_SLASH = False
+# Mail trap send email - sends to sandbox
+EMAIL_BACKEND = 'prj_revenue_hive.backends.email_backend.EmailBackend'
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_FROM = 'support@revenuehive.io'
+EMAIL_HOST_USER = 'aleisha@revenuehive.io'
+EMAIL_HOST_PASSWORD = 'pzkwqiryoimbtrbk'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
