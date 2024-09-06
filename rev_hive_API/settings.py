@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'profiles',
     'rest_framework',
+    'corsheaders', #React and Django will run on different ports during development, so you need to enable CORS to allow your frontend to interact with your Django API.
 ]
 
 MIDDLEWARE = [
@@ -49,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware', #React and Django will run on different ports during development, so you need to enable CORS to allow your frontend to interact with your Django API.
 ]
 
 ROOT_URLCONF = 'rev_hive_API.urls'
@@ -123,3 +125,4 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+CORS_ALLOW_ALL_ORIGINS = True 
