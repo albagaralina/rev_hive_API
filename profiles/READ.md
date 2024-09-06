@@ -1,5 +1,6 @@
 # Project Setup: Django REST Framework API with React Frontend Integration
 
+refactor your code from traditional Django views to Django REST Framework (DRF) for handling API requests,
 This guide will help you restart your Django project, better organize it, set up APIs using Django REST Framework, and connect them with your React frontend.
 
 ## 1. **Restarting the Django Project**
