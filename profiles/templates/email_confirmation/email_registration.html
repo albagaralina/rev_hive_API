@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- bootstrap 4.3.1 -->
+  <link rel="stylesheet" href="{% static 'css/vendor/bootstrap.min.css' %}">
+  <!-- styles -->
+  <link rel="stylesheet" href="{% static 'css/styles.min.css' %}">
+  <!-- favicon -->
+  <link rel="icon" href="{% static 'img/logo.png' %}">
+  <title>Revenue Hive | Home</title>
+
+</head>
+
+<body>
+
+  <!-- LANDING -->
+  <div class="landing">
+    <!-- LANDING DECORATION -->
+    <div class="landing-decoration"></div>
+    <!-- /LANDING DECORATION -->
+
+    <!-- LANDING CONTENT -->
+    <div class="landing-content text-center">
+      <!-- LANDING INFO -->
+      <div class="landing-info container">
+        <!-- LOGO -->
+        <div class="logo">
+          <img src="{% static 'img/logo.png' %}" alt="logo">
+        </div>
+        <!-- /LOGO -->
+
+        <!-- LANDING INFO PRETITLE -->
+        <h2 class="landing-info-pretitle">Welcome to</h2>
+        <!-- /LANDING INFO PRETITLE -->
+
+        <!-- LANDING INFO TITLE -->
+        <h1 class="landing-info-title">Revenue Hive</h1>
+        <!-- /LANDING INFO TITLE -->
+
+        <!-- LANDING INFO TEXT -->
+        <div class="landing-info-text text-center">
+          <!-- LANDING INFO PRETITLE -->
+          <h2 class="landing-info-pretitle">Before we get started, please confirm your email.</h2>
+          <!-- /LANDING INFO PRETITLE -->
+        </div>
+        <!-- /LANDING INFO TEXT -->
+      </div>
+      <!-- /LANDING INFO -->
+    </div>
+
+    <div class="landing-form">
+      <!-- FORM BOX -->
+      <div class="form-box login-register-form-element">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Refer a friend!</h5>
+                <p class="card-text">Help us grow our community! For every 5 qualified sales pro you refer to us we will give you a $25 giftcard</p>
+                <!-- FORM ROW -->
+                <div class="form-row">
+                  <!-- FORM ITEM -->
+                  <div class="form-item">
+                    <!-- BUTTON -->
+                    <button type="submit" class="button medium primary">Submit!</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        
+
+      </div>
+
+    </div>
+    <!-- /LANDING CONTENT -->
+  </div>
+  <!-- /LANDING -->
+
+  <script src="{% static 'js/utils/app.js' %}"></script>
+  <!-- XM_Plugins -->
+  <script src="{% static 'js/vendor/xm_plugins.min.js' %}"></script>
+  <!-- form.utils -->
+  <script src="{% static 'js/form/form.utils.js' %}"></script>
+  <!-- landing.tabs -->
+  <script src="{% static 'js/landing/landing.tabs.js' %}"></script>
+  <!-- SVG icons -->
+  <script src="{% static 'js/utils/svg-loader.js' %}"></script>
+</body>
+
+</html>

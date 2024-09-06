@@ -15,21 +15,19 @@ class Profile(models.Model):
     years_of_experience = models.PositiveIntegerField(default=0)
     bio = models.CharField(max_length=1000)
     phone = models.IntegerField(null=True, blank=True)
-    image = models.ImageField(upload_to="imgs/profile_pic", blank=True, null=True)  # Make image optional
+    image = models.ImageField(default='default.jpg', upload_to="imgs/profile_pic", null=True, blank=True)  # Allow blank and null
     email = models.EmailField(null=True)  
     has_completed_questionnaire = models.BooleanField(default=False)
 
-
-    def __str__(self):
-        return f'{self.user.username} - Profile'
-
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
-        img = Image.open(self.image.path)
-        if img.height > 300 or img.width > 300:
-            output_size = (300, 300)
-            img.thumbnail(output_size)
-            img.save(self.image.path)
+        if self.image and hasattr(self.image, 'path'):  # Only process the image if it exists
+            img = Image.open(self.image.path)
+            if img.height > 300 or img.width > 300:
+                output_size = (300, 300)
+                img.thumbnail(output_size)
+                img.save(self.image.path)
+
 
 
 # purpose to store additional, often optional info about the user that is not directly related to authentication .... bio, description, profile_pic, dob, location, website, phone number, employer, years of experience

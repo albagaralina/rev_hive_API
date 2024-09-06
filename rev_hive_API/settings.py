@@ -128,7 +128,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOW_ALL_ORIGINS = True 
 APPEND_SLASH = False
 # Mail trap send email - sends to sandbox
-EMAIL_BACKEND = 'prj_revenue_hive.backends.email_backend.EmailBackend'
+EMAIL_BACKEND = 'rev_hive_API.backends.email_backend.EmailBackend'
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_FROM = 'support@revenuehive.io'
